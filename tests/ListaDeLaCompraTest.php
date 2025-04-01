@@ -10,13 +10,13 @@ class ListaDeLaCompraTest extends TestCase
     /**
      * @test
      */
-    public function oneProductSendOneProductShowed()
+    public function addOneProcutLowCase()
     {
         $lista = new ListaDeLaCompra();
 
-        $result = $lista->gestionarLista("carne");
+        $result = $lista->gestionarLista("añadir carne");
 
-        $this->assertEquals("carne", $result);
+        $this->assertEquals("carne x1", $result);
     }
 
 

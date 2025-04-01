@@ -6,7 +6,8 @@ class ListaDeLaCompra
 {
     function gestionarLista(string $product):string
     {
-        return "$product";
+        $nombreProducto = explode(" ", $product);
+        return "$nombreProducto[1] x1";
     }
 
 }
