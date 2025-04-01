@@ -73,5 +73,17 @@ class ListaDeLaCompraTest extends TestCase
         $this->assertEquals("carne x4,carne x4", $result);
     }
 
+    /**
+     * @test
+     *
+     */
+    public function toEmptyList()
+    {
+        $lista = new ListaDeLaCompra();
+
+        $result = $lista->gestionarLista("vaciar");
+        $this->assertEquals("", $result);
+    }
+
 
 }

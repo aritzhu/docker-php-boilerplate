@@ -13,15 +13,20 @@ class ListaDeLaCompra
     {
 
         $producto_exploded = explode(" ", $product);
+        if(count($producto_exploded) == 1){
+            $this->lista = [];
+            return  "";
+        }
 
         if(count($producto_exploded) == 2){
             $num = 1;
-        }else{
+        }
+        else{
             $num = intval($producto_exploded[2]);
         }
 
         $lowcase_product = strtolower($producto_exploded[1]);
-        if(isEmpty($this->lista)){
+        if(count($this->lista) == 0){
             array_push($this->lista, "$lowcase_product x$num");
         }
         else{
