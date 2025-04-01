@@ -60,5 +60,18 @@ class ListaDeLaCompraTest extends TestCase
 
     }
 
+    /**
+     * @test
+     *
+     */
+    public function addManyProductsTolist()
+    {
+        $lista = new ListaDeLaCompra();
+
+        $result = $lista->gestionarLista("añadir cArNe 4");
+        $result = $lista->gestionarLista("añadir cArNe 4");
+        $this->assertEquals("carne x4carne x4", $result);
+    }
+
 
 }
