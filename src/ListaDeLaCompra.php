@@ -2,6 +2,7 @@
 
 namespace Deg540\DockerPHPBoilerplate;
 
+use function PHPUnit\Framework\isEmpty;
 use function Sodium\add;
 
 class ListaDeLaCompra
@@ -20,7 +21,13 @@ class ListaDeLaCompra
         }
 
         $lowcase_product = strtolower($producto_exploded[1]);
-        array_push($this->lista, "$lowcase_product x$num\n");
+        if(isEmpty($this->lista)){
+            array_push($this->lista, "$lowcase_product x$num");
+        }
+        else{
+            array_push($this->lista, ",$lowcase_product x$num");
+        }
+
 
         return implode($this->lista);
     }
