@@ -33,5 +33,18 @@ class ListaDeLaCompraTest extends TestCase
 
     }
 
+    /**
+     * @test
+     *
+     */
+    public function addOneProductAndNumberAnyCase()
+    {
+        $lista = new ListaDeLaCompra();
+
+        $result = $lista->gestionarLista("añadir cArNe 4");
+
+        $this->assertEquals("carne x4", $result);
+    }
+
 
 }
