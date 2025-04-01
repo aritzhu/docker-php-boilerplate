@@ -19,6 +19,19 @@ class ListaDeLaCompraTest extends TestCase
         $this->assertEquals("carne x1", $result);
     }
 
+    /**
+     * @test
+     *
+     */
+    public function addOneProductAnyCase()
+    {
+        $lista = new ListaDeLaCompra();
+
+        $result = $lista->gestionarLista("añadir cArNe");
+
+        $this->assertEquals("carne x1", $result);
+
+    }
 
 
 }
