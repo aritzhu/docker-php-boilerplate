@@ -16,7 +16,7 @@ class ListaDeLaCompraTest extends TestCase
 
         $result = $lista->gestionarLista("añadir carne");
 
-        $this->assertEquals("carne x1", $result);
+        $this->assertEquals("carne x1\n", $result);
     }
 
     /**
@@ -29,7 +29,7 @@ class ListaDeLaCompraTest extends TestCase
 
         $result = $lista->gestionarLista("añadir cArNe");
 
-        $this->assertEquals("carne x1", $result);
+        $this->assertEquals("carne x1\n", $result);
 
     }
 
@@ -43,7 +43,7 @@ class ListaDeLaCompraTest extends TestCase
 
         $result = $lista->gestionarLista("añadir cArNe 4");
 
-        $this->assertEquals("carne x4", $result);
+        $this->assertEquals("carne x4\n", $result);
     }
 
     /**
@@ -56,7 +56,7 @@ class ListaDeLaCompraTest extends TestCase
 
         $result = $lista->gestionarLista("añadir cArNe 4");
 
-        $this->assertEquals("carne x4", $result);
+        $this->assertEquals("carne x4\n", $result);
 
     }
 
@@ -70,7 +70,7 @@ class ListaDeLaCompraTest extends TestCase
 
         $result = $lista->gestionarLista("añadir cArNe 4");
         $result = $lista->gestionarLista("añadir cArNe 4");
-        $this->assertEquals("carne x4carne x4", $result);
+        $this->assertEquals("carne x4\ncarne x4\n", $result);
     }
 
 

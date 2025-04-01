@@ -20,7 +20,7 @@ class ListaDeLaCompra
         }
 
         $lowcase_product = strtolower($producto_exploded[1]);
-        array_push($this->lista, "$lowcase_product x$num");
+        array_push($this->lista, "$lowcase_product x$num\n");
 
         return implode($this->lista);
     }
